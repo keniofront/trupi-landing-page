@@ -1,0 +1,18 @@
+.button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-lg);
+  font-size: var(--font-size-body);
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+  font-family: var(--font-family-base);
+
+}
+
+.button:hover {
+  /* Se você quiser escurecer levemente em vez de clarear: color-mix(in srgb, var(--color-primary), black 10%);*/
+  background-color: color-mix(in srgb, var(--color-primary), white 30%);
+}

@@ -1,0 +1,14 @@
+.section {
+  padding: var(--padding-section);
+  background-image: url("../../assets/about/background-bright-01.jpg");
+  background-size: cover;
+}
+
+.text {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: 1rem;
+	margin: 1rem auto;
+}
