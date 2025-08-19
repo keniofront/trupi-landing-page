@@ -1,7 +1,9 @@
 :root {
   /* Cores */
-  --color-primary: #ffa60b;
-  --color-secondary: #72829f;
+  --color-primary: #3155a4;
+  --color-secondary: #00af4c;
+
+  /* ver se precisa dessas aqui */
   --color-base: #1c4273;
   --color-white: white;
   /* --color-background-base: #c9c9c9; */
@@ -10,11 +12,6 @@
   /* --color-gray-dark: #000000; */
   /* --color-gray-medium: #5e5e5e; */
   /* --color-gray-light: #a9a9a9; */
-
-  /* Tipografia */
-  --font-family-base: "Roboto", sans-serif;
-  --font-family-secondary: "Roboto", sans-serif;
-  --font-family-accent: "Anton", sans-serif;
 
   /* Espaçamento */
   --spacing-sm: 1rem;
@@ -36,25 +33,13 @@
 	*/
 
   /* Font Sizes */
-  --font-size-navbar: clamp(0.875rem, 1vw + 0.5rem, 1rem);
-  --font-size-h1: clamp(1.5rem, 2.5vw + 1rem, 2.25rem);
-  --font-size-h2: clamp(1.5rem, 2vw + 0.8rem, 1.875rem);
-  --font-size-h3: clamp(1.25rem, 1.5vw + 0.5rem, 1.5rem);
-  --font-size-h4: clamp(1rem, 1.2vw + 0.4rem, 1.25rem);
-  --font-size-body-lg: clamp(0.95rem, 1vw + 0.4rem, 1.125rem);
-  --font-size-body: clamp(1rem, 1vw + 0.5rem, 1.125rem);
-  --font-size-small: clamp(0.75rem, 0.7vw + 0.2rem, 0.875rem);
-
-  /* --font-size-body: clamp(0.875rem, 0.9vw + 0.3rem, 1rem); */
-
-  /* --font-size-navbar: 1rem; */
-  /* --font-size-h1: 2.25rem; */
-  /* --font-size-h2: 1.875rem; */
-  /* --font-size-h3: 1.5rem; */
-  /* --font-size-h4: 1.25rem; */
-  /* --font-size-body-lg: 1.125rem; */
-  /* --font-size-body: 1rem; */
-  /* --font-size-small: 0.875rem; */
+  --font-size-h1: 2.49rem;
+  --font-size-h2: 2.07rem;
+  --font-size-h3: 1.73rem;
+  --font-size-h4: 1.44rem;
+  --font-size-body-lg: 1.125rem;
+  --font-size-body: 1rem;
+  --font-size-small: 0.69rem;
 
   /* Line Heights */
   --line-height-hero: 1.2;
@@ -97,8 +82,9 @@
 
 html,
 body {
-  font-family: var(--font-family-base);
+  font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
+  font-size: 18px;
 }
 
 /* Containers Base */
@@ -115,27 +101,32 @@ body {
   /* border: 1px solid rgb(189, 226, 43); */
 }
 
-/* Global Styles */
+/* Text Styles */
 h1 {
-  font-size: var(--font-size-h1);
+  font-size: 2.49rem;
+  font-weight: 700;
 }
 
 h2 {
-  font-size: var(--font-size-h2);
+  font-size: 2.07rem;
+  font-weight: 600;
 }
 
 h3 {
-  font-size: var(--font-size-h3);
+  font-size: 1.73rem;
+  font-weight: 600;
 }
 
 h4 {
-  font-size: var(--font-size-h4);
+  font-size: 1.44rem;
+  font-weight: 600;
 }
 
 p {
-  font-size: var(--font-size-body);
+  font-size: 18px;
 }
 
+/* Global Components Styles */
 .card {
   border-width: var(--border-width-sm);
   border-radius: var(--border-radius-md);
@@ -156,6 +147,11 @@ textarea {
     --spacing-lg: 2rem;
 
     --padding-section: 1rem;
+  }
+
+  html,
+  body {
+    font-size: 16px;
   }
 
   /* .section {

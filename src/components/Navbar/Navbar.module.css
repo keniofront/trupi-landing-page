@@ -1,7 +1,6 @@
 .navbar {
   position: fixed;
-  width: var(--max-width);
-  top: 32px;
+  width: 100%;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
@@ -11,18 +10,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: hsla(0, 0%, 100%, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 50px;
-  border: 1px solid white;
   font-size: var(--font-size-navbar);
-  box-shadow: 0 8px 8px #0000003b;
+  border: 2px solid red;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border: 2px solid red;
 }
 
 .scrolled {

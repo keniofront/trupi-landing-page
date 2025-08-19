@@ -1,15 +1,6 @@
-// components
-import Button from "../../components/Button/Button";
-
-// images
-import heroFront from "../../assets/home/hero-img-front.png";
-import stripe from "../../assets/home/back-stripe-texture.jpg";
-import brazil from "../../assets/home/icon-brazil.svg";
-import crane from "../../assets/home/icon-crane.svg";
-import engineering from "../../assets/home/icon-engineering.svg";
-
-// styles
 import styles from "./Home.module.css";
+import Button from "../../components/Button/Button";
+import heroImgFront from "../../assets/home/hero-img-front.png";
 
 export default function Home() {
   return (
@@ -17,47 +8,26 @@ export default function Home() {
       <div className={`container ${styles.container}`}>
         {/* container de texto */}
         <div className={`${styles.textContainer}`}>
-          {/* linha vazia */}
-          <div className={styles.textRow}></div>
-          {/* linha de texto */}
           <div className={styles.textRow}>
             {/* Desktop */}
-            <h1 className={styles.desktop}>Soluções inteligentes para movimentação de cargas pesadas</h1>
-            <h3 className={styles.desktop}>Guindastes, pórticos, pontes rolantes e serviços técnicos especializados que impulsionam a produtividade e segurança no setor industrial.</h3>
+            <h1 className={styles.desktop}>Sua marca com identidade, estratégia e aquele tempero que faz a diferença</h1>
+            <h4 className={styles.desktop}>Na Trupi, a gente transforma ideias em presença, com criatividade, cultura e performance</h4>
 
             {/* Mobile */}
-            <h1 className={styles.mobile}>Impulsione seu negócio</h1>
-            <h3 className={styles.mobile}>Transformamos desafios em oportunidades reais de crescimento.</h3>
+            <h1 className={styles.mobile}>Sua marca com identidade</h1>
+            <h4 className={styles.mobile}>Na Trupi, a gente transforma ideias em presença</h4>
+
             <Button className={styles.button} text="Solicite um orçamento" />
-          </div>
-          {/* linha de features */}
-          <div className={`${styles.textRow} ${styles.featuresContainer}`}>
-            <div className={styles.feature}>
-              <img src={brazil} alt="" />
-              <p>Atendimento em todo o Brasil</p>
-            </div>
-            <div className={styles.feature}>
-              <img src={crane} alt="" />
-              <p>Equipamentos de alta performance</p>
-            </div>
-            <div className={styles.feature}>
-              <img src={engineering} alt="" />
-              <p>Engenharia sob medida</p>
-            </div>
           </div>
         </div>
 
-        {/* container com imagem */}
-        <div className={`${styles.heroFront}`}>
-          <img src={heroFront} alt="Hero Feature" />
+        {/* container da imagem em destaque*/}
+        <div className={`${styles.heroImgFront}`}>
+          <img src={heroImgFront} alt="Hero Feature" />
         </div>
       </div>
 
       {/* fundo */}
-      <div className={styles.stripeContainer}>
-        <img className={styles.stripe} src={stripe} alt="" />
-      </div>
-
       <div className={styles.background}></div>
     </section>
   );

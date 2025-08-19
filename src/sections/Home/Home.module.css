@@ -20,76 +20,37 @@
 
 .textContainer {
   height: 85%;
-  flex: 0 0 65%;
+  padding: 0 1rem;
+  flex: 0 0 60%;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  align-items: start;
   justify-content: center;
   gap: 4rem;
-  /* border: 5px solid red; */
 }
 
 .textRow {
   width: 100%;
-  height: 50%;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  /* border: 5px solid blue; */
+  gap: 2rem;
 }
 
-.textRow:first-child {
-  height: 50%;
+.textRow h1 {
+  color: white;
+  font-size: 3rem;
+}
+
+.textRow h4 {
+  color: white;
+  /* font-size: 1.33rem; */
 }
 
 .button {
   align-self: start;
 }
 
-.featuresContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-}
-
-.feature {
-  width: 165px;
-  height: 165px;
-  border: 1px solid white;
-  border-radius: 24px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  color: white;
-  text-align: center;
-  background-color: hsla(0, 0%, 100%, 0.05);
-  backdrop-filter: blur(2px);
-  box-shadow: 0 8px 8px #0000003b;
-}
-
-.feature img {
-  height: 45%;
-  width: auto;
-}
-
-.textRow h1 {
-  color: var(--color-primary);
-  font-family: var(--font-family-accent);
-  font-weight: normal;
-  font-size: 48px;
-}
-
-.textRow h3 {
-  font-weight: normal;
-  color: white;
-}
-
-.heroFront {
+.heroImgFront {
   flex: 1;
   z-index: -1;
   height: 100%;
@@ -99,19 +60,11 @@
   position: relative;
 }
 
-.heroFront img {
+.heroImgFront img {
   height: 100%;
-  transform: translateX(-150px);
+  /* para movimentar a imagem x e y */
+  transform: translate(-100px, 30px);
   position: absolute;
-}
-
-.stripe {
-  height: 32px;
-  width: 100%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 0;
 }
 
 .background {
@@ -120,8 +73,10 @@
   position: absolute;
   z-index: -10;
   background-image: url("../../assets/home/hero-background.jpg");
-  background-size: cover;
-  background-position: center;
+  background-size: 100%;
+  background-position: bottom;
+  background-position-x: center;
+  background-repeat: no-repeat;
 }
 
 /* REPONSIVIDADE ------------------  */
@@ -140,17 +95,17 @@
   }
 
   .textContainer {
-    width: 95%;
+    /* width: 95%; */
     flex-direction: column;
     flex: 0;
     padding: 1rem;
-    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
     gap: 2rem;
-    background-color: hsla(0, 0%, 100%, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 50px;
-    border: 1px solid white;
-    box-shadow: 0 8px 8px #0000003b;
+    /* background-color: hsla(0, 0%, 100%, 0.05); */
+    /* backdrop-filter: blur(10px); */
+    /* border-radius: 50px; */
+    /* border: 1px solid white; */
+    /* box-shadow: 0 8px 8px #0000003b; */
   }
 
   .textRow {
@@ -160,28 +115,30 @@
     text-align: center;
     gap: 1rem;
     padding: 1rem;
-  }
-
-  .textRow:first-child,
-  .textRow:last-child {
-    display: none;
+    border: 2px solid red;
   }
 
   .textRow h1 {
-    line-height: 4rem;
+    font-size: 2.5rem;
   }
 
   .button {
     align-self: center;
   }
 
-  .heroFront {
+  .heroImgFront {
     order: -1;
   }
 
-  .heroFront img {
+  .heroImgFront img {
     transform: translateX(0px);
     height: 100%;
     top: 3rem;
+  }
+
+  .background {
+    background-image: url("../../assets/home/hero-background-mobile.jpg");
+    background-size: cover;
+    background-position: right;
   }
 }
