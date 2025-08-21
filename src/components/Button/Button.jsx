@@ -5,3 +5,4 @@ const Button = ({ className, text }) => {
 };
 
 export default Button;
+
