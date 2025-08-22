@@ -3,7 +3,7 @@
 }
 
 .section {
-  height: var(--hero-height);
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   overflow: hidden;
@@ -13,7 +13,8 @@
   display: flex;
   align-items: center;
   height: var(--hero-height);
-  border: 10px solid pink;
+  margin-top: var(--navbar-height);
+  /* border: 10px solid pink; */
 }
 
 .mobile {
@@ -60,7 +61,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  border: 20px solid red;
+  /* border: 20px solid rgb(0, 255, 128); */
 }
 
 .heroImgFront img {
@@ -72,15 +73,15 @@
 
 .background {
   width: 100%;
-  height: var(--hero-height);
+  height: 100vh;
   position: absolute;
   z-index: -10;
   background-image: url("../../assets/home/hero-background.jpg");
-  background-size: 100%;
+  background-size: 110%;
   background-position: bottom;
   background-position-x: center;
   background-repeat: no-repeat;
-  border: 10px solid green;
+  /* border: 10px solid green; */
 }
 
 /* REPONSIVIDADE ------------------  */
