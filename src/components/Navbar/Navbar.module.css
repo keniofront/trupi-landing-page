@@ -11,13 +11,14 @@
   justify-content: center;
   align-items: center;
   /* font-size: var(--font-size-navbar); */
-  /* border: 10px solid red; */
+  /* border: 4px solid red; */
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: var(--max-width);
   /* border: 2px solid yellow; */
 }
 
@@ -59,6 +60,7 @@
   display: flex;
   gap: 2rem;
   transition: all 0.3s ease-in-out;
+  /* border: 5px solid pink; */
 }
 
 .links a {
@@ -119,14 +121,17 @@
     backdrop-filter: blur(20px);
     flex-direction: column;
     padding: 1rem;
-    /* padding-bottom: 2rem; */
-    /* overflow: hidden; */
-    /* max-height: 0; */
-    /* opacity: 0; */
-
+    padding-bottom: 2rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(40px, -40px) scale(0.95);
+    /* Começa deslocado para cima e direita */
     transition:
       max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-      opacity 0.3s;
+      opacity 0.3s,
+      transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex; /* sempre flex, controla pelo max-height */
     text-align: end;
     gap: 0;
@@ -135,12 +140,15 @@
   .links a {
     padding: 1rem 2rem;
     color: var(--color-primary);
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .links.active {
-    max-height: 500px; /* valor suficiente para todos os links */
+    max-height: 500px;
     opacity: 1;
+    pointer-events: auto;
+    transform: translate(0, 0) scale(1);
+    /* Vem para baixo e esquerda, posição normal */
   }
 
   .hamburger {

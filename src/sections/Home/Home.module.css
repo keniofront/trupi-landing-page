@@ -6,12 +6,14 @@
   /* height: 100vh; */
   display: flex;
   justify-content: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .container {
+  /* height: 100%; */
   display: flex;
   align-items: center;
+  max-width: var(--max-width);
   height: var(--hero-height);
   margin-top: var(--navbar-height);
   /* border: 10px solid pink; */
@@ -119,8 +121,8 @@
     justify-content: center;
     text-align: center;
     gap: 1rem;
-    padding: 1rem;
-    border: 10px solid yellow;
+    padding: 3rem 1rem;
+    /* border: 10px solid yellow; */
   }
 
   .textContent h1 {

@@ -18,24 +18,25 @@ function About() {
         {/* BLOCO SOBRE */}
         <div className={styles.about}>
           <div className={styles.content}>
-            <PageContent
-              sessionLabel={"Quem somos (ABOUT)"}
-              title={"Uma agência com sotaque, alma criativa e visão de futuro"}
-              content={
-                <>
-                  A Trupi nasceu em Pernambuco com um propósito claro: ajudar marcas a se posicionarem de forma autêntica, estratégica e com aquele toque cultural que só a nossa região tem. <br />
-                  Mais que uma agência de marketing e propaganda, somos uma verdadeira Trupi, um grupo de gente criativa, conectada, curiosa, apaixonada por contar boas histórias e fazer marcas crescerem com propósito.
-                  <br />
-                  Nosso nome carrega o espírito da coletividade, da arte e da bagunça boa que transforma.
-                  <br />
-                  Aqui, cada projeto é tratado com leveza, estratégia, responsabilidade e criatividade com sotaque.
-                </>
-              }
-            />
-          </div>
-
-          <div className={styles.logoImg}>
-            <img src={logoImg} alt="" />
+            <div className={styles.textContent}>
+              <PageContent
+                sessionLabel={"Quem somos (ABOUT)"}
+                title={"Uma agência com sotaque, alma criativa e visão de futuro"}
+                content={
+                  <>
+                    A Trupi nasceu em Pernambuco com um propósito claro: ajudar marcas a se posicionarem de forma autêntica, estratégica e com aquele toque cultural que só a nossa região tem. <br />
+                    Mais que uma agência de marketing e propaganda, somos uma verdadeira Trupi, um grupo de gente criativa, conectada, curiosa, apaixonada por contar boas histórias e fazer marcas crescerem com propósito.
+                    <br />
+                    Nosso nome carrega o espírito da coletividade, da arte e da bagunça boa que transforma.
+                    <br />
+                    Aqui, cada projeto é tratado com leveza, estratégia, responsabilidade e criatividade com sotaque.
+                  </>
+                }
+              />
+            </div>
+            <div className={styles.logoImg}>
+              <img src={logoImg} alt="" />
+            </div>
           </div>
         </div>
 

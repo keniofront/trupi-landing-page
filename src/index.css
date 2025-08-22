@@ -4,8 +4,8 @@
   --color-secondary: #00af4c;
 
   /* ver se precisa dessas aqui */
-  --color-base: #1c4273;
-  --color-white: white;
+  /* --color-base: #1c4273; */
+  /* --color-white: white; */
   /* --color-background-base: #c9c9c9; */
   /* --color-muted: #737373; */
 
@@ -90,15 +90,16 @@ body {
 /* Containers Base */
 .section {
   width: 100%;
-  scroll-margin-top: 40px; /* espaço do topo ao rolar até aqui */
-  /* border: 1px solid palevioletred; */
+  /*  espaço do topo ao rolar até aqui */
+  scroll-margin-top: 40px;
+  /* border: 2px solid #d87093; */
 }
 
 .container {
   width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  /* border: 1px solid rgb(189, 226, 43); */
+  /* max-width: var(--max-width); */
+  /* margin: 0 auto; */
+  /* border: 2px solid #bde22b; */
 }
 
 /* Text Styles */
