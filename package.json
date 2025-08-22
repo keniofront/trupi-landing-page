@@ -8,8 +8,7 @@
 		"build": "vite build",
 		"lint": "eslint .",
 		"preview": "vite preview",
-		"format": "prettier --write .",
-		"run testimonial": "json-server --watch ./src/data/testimonial.json --port 3002"
+		"format": "prettier --write ."
 	},
 	"dependencies": {
 		"react": "^19.1.0",

@@ -1,35 +1,65 @@
-import { useEffect, useState } from "react";
-import Carousel from "./Carousel.jsx";
 import styles from "./Testimonials.module.css";
-import SectionHeader from "../../components/SectionHeader/SectionHeader";
+import dummy from "../../assets/about/dummy-image.jpg";
 
-function Testimonials() {
-  const [testimonials, setTestimonials] = useState([]);
+// Mockdata - Testemunhos
 
-  useEffect(() => {
-    const fetchTestimonials = async () => {
-      try {
-        const response = await fetch("http://localhost:3002/depoimentos");
-        const data = await response.json();
-        setTestimonials(data);
-      } catch (err) {
-        console.error("Erro ao buscar depoimentos", err);
-      }
-    };
-    fetchTestimonials();
-  }, []);
+const testimonialsData = [
+  {
+    title: "Experiência Excepcional",
+    testimonial: "A qualidade do serviço superou todas as minhas expectativas. A equipe demonstrou profissionalismo e atenção aos detalhes impressionantes.",
+    name: "Ana Silva",
+    position: "Diretora de Marketing",
+    avatar: dummy,
+  },
+  {
+    title: "Suporte Incrível",
+    testimonial: "O atendimento ao cliente é verdadeiramente excepcional. Sempre prontos para ajudar e resolver qualquer questão com rapidez e eficiência.",
+    name: "Carlos Mendes",
+    position: "CEO",
+    avatar: dummy,
+  },
+];
 
+// Componente Card
+
+function TestimonialCard({ testimonial }) {
   return (
-    <section id="testimonials" className={`section ${styles.section}`}>
-      <div className={`container ${styles.container}`}>
-        {/* Bloco com título e descrição da seção */}
-        <SectionHeader center section={"Depoimentos"} title={"O que nossos clientes dizem"} description={" Conheça alguns dos projetos que transformaram negócios e geraram  resultados expressivos, graças à nossa abordagem estratégica e  inovadora."} />
+    <div className={styles.testimonialCard}>
+      <h3>{testimonial.title}</h3>
+      <p>{testimonial.testimonial}</p>
 
-        {/* Carrossel dinâmico com os depoimentos */}
-        <Carousel items={testimonials} itemsPerPage={4} />
+      <div className={styles.personContainer}>
+        <div className={styles.personPhoto}>
+          <img src={testimonial.avatar} alt="" />
+        </div>
+
+        <div className={styles.personContent}>
+          <h4>{testimonial.name}</h4>
+          <p>{testimonial.position}</p>
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
 
+// Componente Final
+
+function Testimonials() {
+  // REGRAS!!!
+
+  return (
+    <div className={`section`}>
+      <div className={`container`}>
+
+
+         
+        <div className={styles.cardContainer}>
+          {testimonialsData.map((testimonial, index) => (
+            <TestimonialCard key={index} testimonial={testimonial} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 export default Testimonials;

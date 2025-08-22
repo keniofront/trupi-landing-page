@@ -1,12 +1,30 @@
-/*
+/*ACHO QUE AQUI VOU FAZER APENAS UM HOVER COM UM LINK PARA O SITE DA SIMONSEN */
 
-ACHO QUE AQUI VOU FAZER APENAS UM HOVER COM UM LINK PARA O SITE DA SIMONSEN
-
- */
+import styles from "./Portfolio.module.css";
+import PageContent from "../../components/PageContent/PageContent";
+import dummy from "../../assets/about/dummy-image.jpg";
 
 function Portfolio() {
-  return <div>Portfolio</div>;
+  return (
+    <div className={`section`}>
+      <div className={`container ${styles.container}`}>
+        <div className={styles.textContent}>
+          <PageContent sessionLabel={"Portfólio (PORTIFOLIO)"} title={"Marcas que evoluíram com a Trupi"} content={"De pequenos negócios a marcas que querem escalar, já ajudamos várias empresas a ganharem vida no digital, conquistarem seu público e alcançarem metas de verdade."} />
+        </div>
+
+        <div className={styles.clientsContent}>
+          <div className={styles.client}>
+            <img src={dummy} alt="" />
+          </div>
+          <div className={styles.client}>
+            <img src={dummy} alt="" />
+          </div>{" "}
+          <div className={styles.client}>
+            <img src={dummy} alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
 export default Portfolio;
-
-

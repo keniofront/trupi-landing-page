@@ -1,0 +1,17 @@
+.container{
+   display: flex;
+}
+
+
+.clientsContent{
+   width: 100%;
+   display: flex;
+}
+
+.client{
+   width: 100%;
+}
+
+.client img{
+   width: 100%;
+}
