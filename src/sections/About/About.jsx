@@ -1,52 +1,75 @@
 import styles from "./About.module.css";
-import SectionHeader from "../../components/SectionHeader/SectionHeader";
+import logoImg from "../../assets/about/logo-img.png";
+import dummy from "../../assets/about/dummy-image.jpg";
+import PageContent from "../../components/PageContent/PageContent";
 
-export default function About() {
+// ARRAY DE OBJETOS "VALORES"
+export const skills = [
+  {
+    image: dummy,
+    description: "TESTE Lorem ipsum dolor sit amet consectetur adipisicing.",
+  },
+];
+
+function About() {
   return (
     <section id="about" className={`section ${styles.section}`}>
       <div className={`container ${styles.container}`}>
-        {/* coluna esquerda */}
-        <div className={styles.text}>
-          <SectionHeader
-            section={"Sobre Nós (ABOUT)"}
-            title={"Há mais de 15 anos, conectando engenharia, inovação e eficiência"}
-            description={
-              <>
-                <p>A Simonsen do Brasil é uma empresa referência nacional em soluções industriais para movimentação de cargas, unindo tecnologia, engenharia especializada e equipamentos robustos para atender aos desafios de grandes operações. </p>
-                <br />
-                <p>Com uma abordagem consultiva, entregamos mais que produtos: oferecemos projetos completos, suporte técnico e integração total com os processos industriais dos nossos clientes.</p>
-                <br />
-                <p>Atuamos com excelência nos setores de:</p>
-              </>
-            }
-          />
+        {/* BLOCO SOBRE */}
+        <div className={styles.about}>
+          <div className={styles.content}>
+            <PageContent
+              sessionLabel={"Quem somos (ABOUT)"}
+              title={"Uma agência com sotaque, alma criativa e visão de futuro"}
+              content={
+                <>
+                  A Trupi nasceu em Pernambuco com um propósito claro: ajudar marcas a se posicionarem de forma autêntica, estratégica e com aquele toque cultural que só a nossa região tem. <br />
+                  Mais que uma agência de marketing e propaganda, somos uma verdadeira Trupi, um grupo de gente criativa, conectada, curiosa, apaixonada por contar boas histórias e fazer marcas crescerem com propósito.
+                  <br />
+                  Nosso nome carrega o espírito da coletividade, da arte e da bagunça boa que transforma.
+                  <br />
+                  Aqui, cada projeto é tratado com leveza, estratégia, responsabilidade e criatividade com sotaque.
+                </>
+              }
+            />
+          </div>
 
-          <div className={styles.cards}>
-            <div className={styles.card}>
-              <h4>Construção civil pesada</h4>
-            </div>
-
-            <div className={styles.card}>
-              <h4>Indústria metalúrgica</h4>
-            </div>
-
-            <div className={styles.card}>
-              <h4>Mineração</h4>
-            </div>
-
-            <div className={styles.card}>
-              <h4>Logística portuária</h4>
-            </div>
-
-            <div className={styles.card}>
-              <h4>Manufatura de grande escala</h4>
-            </div>
+          <div className={styles.logoImg}>
+            <img src={logoImg} alt="" />
           </div>
         </div>
 
-        {/* coluna direita */}
-        <div className={styles.image}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, amet rerum. Sed similique corporis eveniet.</div>
+        <div className={styles.missionEvalues}>
+          {/* BLOCO MISSÃO */}
+          <div className={styles.mission}>
+            <PageContent title={"Nossa missão"} content={<>Atuar como parceira estratégica de marcas que buscam crescimento digital com propósito, oferecendo soluções criativas, eficientes e culturalmente relevantes.</>} />
+            <div>
+              <img src={dummy} alt="" />
+            </div>
+          </div>
+
+          {/* BLOCO VALORES */}
+          <div className={styles.values}>
+            <PageContent title={"Nosso valores"} content={<>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut condimentum enim. Pellentesque tincidunt enim elementum lacus pulvinar rutrum. Pellentesque.</>} />
+
+            {/* lista de valores dinamicos */}
+            <div>
+              {skills.map((skill, index) => {
+                return (
+                  <div className={styles.skill} key={index}>
+                    <div className={styles.skillImg}>
+                      <img src={skill.image} alt="" />
+                    </div>
+                    <p>{skill.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
 }
+
+export default About;

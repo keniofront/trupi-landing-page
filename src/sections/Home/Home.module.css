@@ -3,15 +3,17 @@
 }
 
 .section {
-  height: 100vh;
+  height: var(--hero-height);
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 .container {
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: var(--hero-height);
+  border: 10px solid pink;
 }
 
 .mobile {
@@ -29,19 +31,19 @@
   gap: 4rem;
 }
 
-.textRow {
+.textContent {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.textRow h1 {
+.textContent h1 {
   color: white;
   font-size: 3rem;
 }
 
-.textRow h4 {
+.textContent h4 {
   color: white;
   /* font-size: 1.33rem; */
 }
@@ -58,6 +60,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  border: 20px solid red;
 }
 
 .heroImgFront img {
@@ -69,7 +72,7 @@
 
 .background {
   width: 100%;
-  height: 100vh;
+  height: var(--hero-height);
   position: absolute;
   z-index: -10;
   background-image: url("../../assets/home/hero-background.jpg");
@@ -77,6 +80,7 @@
   background-position: bottom;
   background-position-x: center;
   background-repeat: no-repeat;
+  border: 10px solid green;
 }
 
 /* REPONSIVIDADE ------------------  */
@@ -98,9 +102,9 @@
     /* width: 95%; */
     flex-direction: column;
     flex: 0;
-    padding: 1rem;
+    /* padding: 1rem; */
     /* margin-bottom: 3rem; */
-    gap: 2rem;
+    /* gap: 2rem; */
     /* background-color: hsla(0, 0%, 100%, 0.05); */
     /* backdrop-filter: blur(10px); */
     /* border-radius: 50px; */
@@ -108,17 +112,17 @@
     /* box-shadow: 0 8px 8px #0000003b; */
   }
 
-  .textRow {
+  .textContent {
     width: 100%;
-    height: auto;
+    /* height: auto; */
     justify-content: center;
     text-align: center;
     gap: 1rem;
     padding: 1rem;
-    border: 2px solid red;
+    border: 10px solid yellow;
   }
 
-  .textRow h1 {
+  .textContent h1 {
     font-size: 2.5rem;
   }
 

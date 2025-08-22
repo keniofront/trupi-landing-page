@@ -8,7 +8,7 @@ export default function Home() {
       <div className={`container ${styles.container}`}>
         {/* container de texto */}
         <div className={`${styles.textContainer}`}>
-          <div className={styles.textRow}>
+          <div className={styles.textContent}>
             {/* Desktop */}
             <h1 className={styles.desktop}>Sua marca com identidade, estratégia e aquele tempero que faz a diferença</h1>
             <h4 className={styles.desktop}>Na Trupi, a gente transforma ideias em presença, com criatividade, cultura e performance</h4>

@@ -9,6 +9,8 @@ import Cases from "./sections/Cases/Cases";
 import Testimonials from "./sections/Testimonials/Testimonials";
 import Contact from "./sections/Contact/Contact";
 import Footer from "./components/Footer/Footer";
+import Method from "./sections/Method/Method";
+import Portfolio from "./sections/Portfolio/Portfolio";
 
 export default function App() {
   return (
@@ -17,6 +19,8 @@ export default function App() {
       <Home />
       <About />
       <Services />
+      <Method />
+      <Portfolio />
       <Products />
       <Cta />
       <Values />
