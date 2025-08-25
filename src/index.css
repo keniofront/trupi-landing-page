@@ -82,45 +82,45 @@
 
 html,
 body {
+  font-size: 18px;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
-  font-size: 18px;
 }
 
 /* Containers Base */
 .section {
-  width: 100%;
+  /* width: 100%; */
   /*  espaço do topo ao rolar até aqui */
   scroll-margin-top: 40px;
-  /* border: 2px solid #d87093; */
+  border: 2px solid #d87093;
 }
 
 .container {
-  width: 100%;
+  /* width: 100%; */
   /* max-width: var(--max-width); */
   /* margin: 0 auto; */
-  /* border: 2px solid #bde22b; */
+  border: 2px solid #bde22b;
 }
 
 /* Text Styles */
 h1 {
-  font-size: 2.49rem;
   font-weight: 700;
+  font-size: 2.49rem;
 }
 
 h2 {
-  font-size: 2.07rem;
   font-weight: 600;
+  font-size: 2.07rem;
 }
 
 h3 {
-  font-size: 1.73rem;
   font-weight: 600;
+  font-size: 1.73rem;
 }
 
 h4 {
-  font-size: 1.44rem;
   font-weight: 600;
+  font-size: 1.44rem;
 }
 
 p {
@@ -129,11 +129,11 @@ p {
 
 /* Global Components Styles */
 .card {
-  border-width: var(--border-width-sm);
-  border-radius: var(--border-radius-md);
+  padding: 1rem;
   border-color: var(--color-primary);
   border-style: solid;
-  padding: 1rem;
+  border-width: var(--border-width-sm);
+  border-radius: var(--border-radius-md);
 }
 
 input,
