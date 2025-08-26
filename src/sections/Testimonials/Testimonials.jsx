@@ -1,8 +1,10 @@
-import styles from "./Testimonials.module.css";
-import dummy from "../../assets/about/dummy-image.jpg";
+import { useState } from "react"; // Importa o hook useState do React para gerenciar o estado do componente
+import styles from "./Testimonials.module.css"; // Importa os estilos CSS do módulo
+import dummy from "../../assets/about/dummy-image.jpg"; // Imagem dummy para os avatares
+import PageContent from "../../components/PageContent/PageContent"; // Componente de conteúdo da página
 
 // Mockdata - Testemunhos
-
+// Array com objetos representando cada depoimento
 const testimonialsData = [
   {
     title: "Experiência Excepcional",
@@ -18,10 +20,52 @@ const testimonialsData = [
     position: "CEO",
     avatar: dummy,
   },
+  {
+    title: "Resultados Surpreendentes",
+    testimonial: "Os resultados obtidos foram além do que imaginávamos. A estratégia implementada trouxe um crescimento significativo para nossa empresa.",
+    name: "Mariana Costa",
+    position: "Product Manager",
+    avatar: dummy,
+  },
+  {
+    title: "Parceria de Confiança",
+    testimonial: "Encontramos não apenas um fornecedor, mas um verdadeiro parceiro estratégico. A confiança e transparência fazem toda a diferença.",
+    name: "Roberto Oliveira",
+    position: "CTO",
+    avatar: dummy,
+  },
+  {
+    title: "Inovação Constante",
+    testimonial: "A capacidade de inovação e adaptação às novas tecnologias é impressionante. Sempre um passo à frente das tendências do mercado.",
+    name: "Lucia Ferreira",
+    position: "Head of Innovation",
+    avatar: dummy,
+  },
+  {
+    title: "Eficiência Máxima",
+    testimonial: "A otimização dos processos e a eficiência na entrega dos projetos nos permitiu acelerar significativamente nosso crescimento.",
+    name: "Pedro Santos",
+    position: "Operations Director",
+    avatar: dummy,
+  },
+  {
+    title: "Qualidade Premium",
+    testimonial: "A qualidade do trabalho entregue é consistentemente alta. Cada detalhe é cuidadosamente considerado e executado com precisão.",
+    name: "Juliana Rocha",
+    position: "Quality Assurance Lead",
+    avatar: dummy,
+  },
+  {
+    title: "Transformação Digital",
+    testimonial: "A transformação digital da nossa empresa foi conduzida de forma excepcional. Resultados mensuráveis em tempo recorde.",
+    name: "André Campos",
+    position: "Digital Transformation Manager",
+    avatar: dummy,
+  },
 ];
 
 // Componente Card
-
+// Este componente recebe um depoimento e exibe suas informações
 function TestimonialCard({ testimonial }) {
   return (
     <div className={styles.testimonialCard}>
@@ -42,24 +86,54 @@ function TestimonialCard({ testimonial }) {
   );
 }
 
-// Componente Final
-
+// Componente Principal
 function Testimonials() {
-  // REGRAS!!!
+  // Define quantos depoimentos serão exibidos por página
+  const testimonialsPerPage = 4;
+
+  // Estado para controlar a página atual (começa em 0)
+  const [currentPage, setCurrentPage] = useState(0);
+
+  // Calcula o total de páginas necessárias para exibir todos os depoimentos
+  const totalPages = Math.ceil(testimonialsData.length / testimonialsPerPage);
+
+  // Função chamada ao clicar no botão "Próximos"
+  // Avança para a próxima página, e volta para a primeira ao chegar no final
+  const nextPage = () => {
+    setCurrentPage((prev) => (prev + 1) % totalPages);
+  };
+
+  // Calcula o índice inicial e final dos depoimentos a serem exibidos na página atual
+  const startIndex = currentPage * testimonialsPerPage;
+  const endIndex = startIndex + testimonialsPerPage;
+
+  // Seleciona apenas os depoimentos da página atual usando slice
+  const currentTestimonials = testimonialsData.slice(startIndex, endIndex);
 
   return (
     <div className={`section`}>
-      <div className={`container`}>
+      <div className={`container ${styles.container}`}>
+        {/* Header */}
+        <PageContent sessionLabel={"Depoimentos (Testimonials)"} title={"Quem trabalha com a gente, vira fã e parceiro de jornada."} showContent={false} />
 
-
-         
+        {/* Cards Container*/}
         <div className={styles.cardContainer}>
-          {testimonialsData.map((testimonial, index) => (
-            <TestimonialCard key={index} testimonial={testimonial} />
+          {currentTestimonials.map((testimonial, index) => (
+            // Renderiza um card para cada depoimento da página atual
+            <TestimonialCard key={startIndex + index} testimonial={testimonial} />
           ))}
+        </div>
+
+        {/* Navigation */}
+        <div className={styles.nav}>
+          <button onClick={nextPage} className={styles.nextButton}>
+            {/* Ícone pode ser adicionado aqui */}
+            Próximos
+          </button>
         </div>
       </div>
     </div>
   );
 }
+
 export default Testimonials;

@@ -1,22 +1,22 @@
 import Button from "../../components/Button/Button";
-import SectionHeader from "../../components/SectionHeader/SectionHeader";
-
+import PageContent from "../../components/PageContent/PageContent";
 import styles from "./Cta.module.css";
+import dummy from "../../assets/about/dummy-image.jpg";
 
 export default function Cta() {
   return (
-    <section id="cta" className={`section ${styles.section}`}>
-      <div className={`${styles.container}`}>
-        <div className={styles.float}>
-          <div className={styles.text}>
-            <SectionHeader white section={"Nossa Especialidade (CTA)"} title={"Engenharia aplicada ao resultado. Projetos completos para movimentação industrial"} />
-            <Button className={styles.button} text={"Lorem ipsum dolor sit amet"} />
-          </div>
-          <div className={styles.empty}></div>
+    <div className={`section ${styles.section}`}>
+      <div className={`container ${styles.container}`}>
+        <div className={styles.content}>
+          <PageContent showSession={false} title={"Bora colocar sua marca no mundo do jeito certo? cta"} content={"Se você quer crescer com consistência, criatividade e estratégia, a Trupi é sua parceira. Vamos conversar sobre o futuro da sua marca?"} />
+
+          <Button text={"lorem ipsum"} className={styles.btn}/>
         </div>
-        <div className={styles.left}></div>
-        <div className={styles.right}></div>
+
+        <div className={styles.image}>
+          <img src={dummy} alt="" />
+        </div>
       </div>
-    </section>
+    </div>
   );
 }

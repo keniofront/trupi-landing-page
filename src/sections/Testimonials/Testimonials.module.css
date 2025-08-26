@@ -1,18 +1,39 @@
-.cardContainer {
+.container {
   display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: end;
+  width: var(--max-width);
+  height: 100%;
+  margin: var(--padding-section) auto;
+  border: 5px solid red;
 }
 
-.testimonaialCard {
+.cardContainer {
+  display: flex;
+  gap: 1rem;
+  height: 320px;
+  border: 2px solid yellow;
+}
+
+.testimonialCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
   border: 2px solid black;
 }
 
 .personContainer {
-  width: 100%;
   display: flex;
+  width: 100%;
   border: 2px solid red;
 }
 
 .personPhoto img {
-  width: 48px;
+  width: 56px;
+}
+
+.nextButton {
+  padding: 1rem;
 }
