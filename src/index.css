@@ -1,74 +1,9 @@
 :root {
-  /* Cores */
   --color-primary: #3155a4;
   --color-secondary: #00af4c;
-
-  /* ver se precisa dessas aqui */
-  /* --color-base: #1c4273; */
-  /* --color-white: white; */
-  /* --color-background-base: #c9c9c9; */
-  /* --color-muted: #737373; */
-
-  /* --color-gray-dark: #000000; */
-  /* --color-gray-medium: #5e5e5e; */
-  /* --color-gray-light: #a9a9a9; */
-
-  /* Espaçamento */
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 3rem;
-
-  /* Padding */
-  --padding-section: 72px;
-  /* --padding-content: 1rem; */
-
-  /* Tamanhos padrão */
   --max-width: 1200px;
-
-  /*
-	A função clamp(min, preferred, max) permite definir um valor responsivo que:
-	- Nunca é menor que o valor mínimo.
-	- Cresce com o tamanho do viewport.
-	- Nunca ultrapassa o valor máximo. 
-	*/
-
-  /* Font Sizes */
-  --font-size-h1: 2.49rem;
-  --font-size-h2: 2.07rem;
-  --font-size-h3: 1.73rem;
-  --font-size-h4: 1.44rem;
-  --font-size-body-lg: 1.125rem;
-  --font-size-body: 1rem;
-  --font-size-small: 0.69rem;
-
-  /* Line Heights */
-  --line-height-hero: 1.2;
-  --line-height-default: 1.5;
-
-  /* Font Weights */
-  --font-weight-bold: 700;
-  --font-weight-extra: 800;
-  --font-weight-black: 900;
-
-  /* Bordas */
-  --border-width-none: 0;
-  --border-width-sm: 2px;
-  --border-width-md: 4px;
-  --border-width-lg: 6px;
-
-  --border-radius-none: 0;
-  --border-radius-sm: 0.5rem;
-  --border-radius-md: 1rem;
-  --border-radius-lg: 1.5rem;
-
-  /* Tamanho da Navbar */
+  --padding-section: 72px;
   --navbar-height: 65px;
-
-  /* Responsividade */
-  --break-sm: 480px;
-  --break-md: 768px;
-  --break-lg: 1024px;
-  --break-xl: 1280px;
 }
 
 /* Reset básico */
@@ -89,17 +24,15 @@ body {
 
 /* Containers Base */
 .section {
-  /* width: 100%; */
+  border: 2px solid #d87093;
   /*  espaço do topo ao rolar até aqui */
   scroll-margin-top: 40px;
-  border: 2px solid #d87093;
 }
 
 .container {
   /* width: 100%; */
   /* max-width: var(--max-width); */
   /* margin: 0 auto; */
-  border: 2px solid #bde22b;
 }
 
 /* Text Styles */
@@ -142,14 +75,6 @@ textarea {
 }
 
 @media (max-width: 700px) {
-  :root {
-    --spacing-sm: 0.5rem;
-    --spacing-md: 1rem;
-    --spacing-lg: 2rem;
-
-    --padding-section: 1rem;
-  }
-
   html,
   body {
     font-size: 16px;

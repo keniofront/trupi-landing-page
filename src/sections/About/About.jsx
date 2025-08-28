@@ -1,9 +1,10 @@
 import styles from "./About.module.css";
-import logoImg from "../../assets/about/logo-img.png";
-import dummy from "../../assets/about/dummy-image.jpg";
 import PageContent from "../../components/PageContent/PageContent";
 
-// ARRAY DE OBJETOS "VALORES"
+// IMAGES
+import dummy from "../../assets/about/dummy-image.jpg";
+import logoImg from "../../assets/about/logo-img.png";
+
 export const skills = [
   {
     image: dummy,
@@ -29,7 +30,10 @@ export const skills = [
 
 function About() {
   return (
-    <section id="about" className={`section ${styles.section}`}>
+    <section
+      id="about"
+      className={`section ${styles.section}`}
+    >
       <div className={`container ${styles.container}`}>
         {/* BLOCO SOBRE */}
         <div className={styles.about}>
@@ -38,26 +42,38 @@ function About() {
             <div className={styles.textContent}>
               <PageContent
                 sessionLabel={"Quem somos (ABOUT)"}
-                title={"Uma agência com sotaque, alma criativa e visão de futuro"}
+                title={
+                  "Uma agência com sotaque, alma criativa e visão de futuro"
+                }
                 content={
                   <>
-                    A Trupi nasceu em Pernambuco com um propósito claro: ajudar marcas a se posicionarem de forma autêntica, estratégica e com aquele toque cultural que só a nossa região tem.
+                    A Trupi nasceu em Pernambuco com um propósito claro: ajudar
+                    marcas a se posicionarem de forma autêntica, estratégica e
+                    com aquele toque cultural que só a nossa região tem.
                     <br />
                     <br />
-                    Mais que uma agência de marketing e propaganda, somos uma verdadeira Trupi, um grupo de gente criativa, conectada, curiosa, apaixonada por contar boas histórias e fazer marcas crescerem com propósito.
+                    Mais que uma agência de marketing e propaganda, somos uma
+                    verdadeira Trupi, um grupo de gente criativa, conectada,
+                    curiosa, apaixonada por contar boas histórias e fazer marcas
+                    crescerem com propósito.
                     <br />
                     <br />
-                    Nosso nome carrega o espírito da coletividade, da arte e da bagunça boa que transforma.
+                    Nosso nome carrega o espírito da coletividade, da arte e da
+                    bagunça boa que transforma.
                     <br />
                     <br />
-                    Aqui, cada projeto é tratado com leveza, estratégia, responsabilidade e criatividade com sotaque.
+                    Aqui, cada projeto é tratado com leveza, estratégia,
+                    responsabilidade e criatividade com sotaque.
                   </>
                 }
               />
             </div>
             {/* coluna de imagem */}
             <div className={styles.imgContent}>
-              <img src={logoImg} alt="" />
+              <img
+                src={logoImg}
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -65,23 +81,52 @@ function About() {
         <div className={styles.missionEvalues}>
           {/* BLOCO MISSÃO */}
           <div className={styles.mission}>
-            <PageContent showSession={false} title={"Nossa missão"} content={<>Atuar como parceira estratégica de marcas que buscam crescimento digital com propósito, oferecendo soluções criativas, eficientes e culturalmente relevantes.</>} />
+            <PageContent
+              showSession={false}
+              title={"Nossa missão"}
+              content={
+                <>
+                  Atuar como parceira estratégica de marcas que buscam
+                  crescimento digital com propósito, oferecendo soluções
+                  criativas, eficientes e culturalmente relevantes.
+                </>
+              }
+            />
 
             <div className={styles.missionImg}>
-              <img src={dummy} alt="" />
+              <img
+                src={dummy}
+                alt=""
+              />
             </div>
           </div>
 
           {/* BLOCO VALORES */}
           <div className={styles.values}>
-            <PageContent showSession={false} title={"Nosso valores"} content={<>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut condimentum enim. Pellentesque tincidunt enim elementum lacus pulvinar rutrum. Pellentesque.</>} />
+            <PageContent
+              showSession={false}
+              title={"Nosso valores"}
+              content={
+                <>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Suspendisse ut condimentum enim. Pellentesque tincidunt enim
+                  elementum lacus pulvinar rutrum. Pellentesque.
+                </>
+              }
+            />
 
             {/* lista de valores dinamicos */}
             <div className={styles.skills}>
               {skills.map((skill, index) => {
                 return (
-                  <div className={styles.skill} key={index}>
-                    <img src={skill.image} alt="" />
+                  <div
+                    className={styles.skill}
+                    key={index}
+                  >
+                    <img
+                      src={skill.image}
+                      alt=""
+                    />
                     <p>{skill.description}</p>
                   </div>
                 );
