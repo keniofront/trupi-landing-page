@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 
 // Navlinks data
 export const navbarLinks = [
   { title: "Sobre", url: "#about" },
   { title: "Serviços", url: "#services" },
-  { title: "Cases", url: "#cases" },
+  { title: "Portfolio", url: "#portfolio" },
   { title: "Depoimentos", url: "#testimonials" },
-  { title: "Faq", url: "#faq" },
-  { title: "Blog", url: "#blog" },
   { title: "Contato", url: "#contact" },
 ];
 

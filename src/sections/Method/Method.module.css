@@ -1,41 +1,33 @@
+.section {
+  padding: var(--padding-section-desktop) 0;
+}
+
 .container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  width: var(--max-width);
-  margin: var(--padding-section) auto;
-  border: 5px solid red;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
 .methods {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  width: 100%;
-  overflow: hidden;
-  border: 2px solid yellow;
+  margin-top: 2rem;
 }
 
 .method {
   display: flex;
-  /* gap: 1rem; */
-  width: 400px;
-  height: 400px;
-  border: 2px solid black;
 }
 
 .methodImg {
-  /* width: 300px; */
   width: 100px;
-  /* display: flex; */
-  /* justify-content: center; */
   overflow: hidden;
-  border: 2px solid black;
 }
 
 .methodImg img {
   width: 100px;
   height: 100%;
   object-fit: cover;
+  object-position: left;
 }
 
 .methodContent {
@@ -44,8 +36,29 @@
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
+  color: white;
+  background-color: #a8a9bb;
 }
 
 .methodContent .title {
   font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: var(--padding-section-mobile) 1rem;
+  }
+
+  .methods {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+  }
+
+  .methodContent{
+    padding: 2rem;
+  }
+
+  .methodContent p{
+    font-size: 20px;
+  }
 }

@@ -4,3 +4,7 @@
    gap: 32px;
    color: var(--color-primary);
 }
+
+.content h3{
+   color: var(--color-secondary);
+}

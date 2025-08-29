@@ -4,7 +4,7 @@ import Form from "../../components/Form/Form";
 
 function Contact() {
   return (
-    <div className={`section`}>
+    <div id="contact" className={`section`}>
       <div className={`container ${styles.container}`}>
         <PageContent
           sessionLabel={"Contato(contact)"}

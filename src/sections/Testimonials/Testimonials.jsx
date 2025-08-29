@@ -1,7 +1,16 @@
 import { useState } from "react"; // Importa o hook useState do React para gerenciar o estado do componente
 import styles from "./Testimonials.module.css"; // Importa os estilos CSS do módulo
-import dummy from "../../assets/about/dummy-image.jpg"; // Imagem dummy para os avatares
 import PageContent from "../../components/PageContent/PageContent"; // Componente de conteúdo da página
+
+// IMAGES
+import testImg1 from "../../assets/testimonials/test-img-01.jpg";
+import testImg2 from "../../assets/testimonials/test-img-02.jpg";
+import testImg3 from "../../assets/testimonials/test-img-03.jpg";
+import testImg4 from "../../assets/testimonials/test-img-04.jpg";
+import testImg5 from "../../assets/testimonials/test-img-05.jpg";
+import testImg6 from "../../assets/testimonials/test-img-06.jpg";
+import testImg7 from "../../assets/testimonials/test-img-07.jpg";
+import testImg8 from "../../assets/testimonials/test-img-08.jpg";
 
 // Mockdata - Testemunhos
 // Array com objetos representando cada depoimento
@@ -11,56 +20,56 @@ const testimonialsData = [
     testimonial: "A qualidade do serviço superou todas as minhas expectativas. A equipe demonstrou profissionalismo e atenção aos detalhes impressionantes.",
     name: "Ana Silva",
     position: "Diretora de Marketing",
-    avatar: dummy,
+    avatar: testImg1,
   },
   {
     title: "Suporte Incrível",
     testimonial: "O atendimento ao cliente é verdadeiramente excepcional. Sempre prontos para ajudar e resolver qualquer questão com rapidez e eficiência.",
     name: "Carlos Mendes",
     position: "CEO",
-    avatar: dummy,
+    avatar: testImg2,
   },
   {
     title: "Resultados Surpreendentes",
     testimonial: "Os resultados obtidos foram além do que imaginávamos. A estratégia implementada trouxe um crescimento significativo para nossa empresa.",
     name: "Mariana Costa",
     position: "Product Manager",
-    avatar: dummy,
+    avatar: testImg3,
   },
   {
     title: "Parceria de Confiança",
     testimonial: "Encontramos não apenas um fornecedor, mas um verdadeiro parceiro estratégico. A confiança e transparência fazem toda a diferença.",
     name: "Roberto Oliveira",
     position: "CTO",
-    avatar: dummy,
+    avatar: testImg4,
   },
   {
     title: "Inovação Constante",
     testimonial: "A capacidade de inovação e adaptação às novas tecnologias é impressionante. Sempre um passo à frente das tendências do mercado.",
     name: "Lucia Ferreira",
     position: "Head of Innovation",
-    avatar: dummy,
+    avatar: testImg5,
   },
   {
     title: "Eficiência Máxima",
     testimonial: "A otimização dos processos e a eficiência na entrega dos projetos nos permitiu acelerar significativamente nosso crescimento.",
     name: "Pedro Santos",
     position: "Operations Director",
-    avatar: dummy,
+    avatar: testImg6,
   },
   {
     title: "Qualidade Premium",
     testimonial: "A qualidade do trabalho entregue é consistentemente alta. Cada detalhe é cuidadosamente considerado e executado com precisão.",
     name: "Juliana Rocha",
     position: "Quality Assurance Lead",
-    avatar: dummy,
+    avatar: testImg7,
   },
   {
     title: "Transformação Digital",
     testimonial: "A transformação digital da nossa empresa foi conduzida de forma excepcional. Resultados mensuráveis em tempo recorde.",
     name: "André Campos",
     position: "Digital Transformation Manager",
-    avatar: dummy,
+    avatar: testImg8,
   },
 ];
 
@@ -68,7 +77,7 @@ const testimonialsData = [
 // Este componente recebe um depoimento e exibe suas informações
 function TestimonialCard({ testimonial }) {
   return (
-    <div className={styles.testimonialCard}>
+    <div id="testimonials" className={styles.testimonialCard}>
       <h3>{testimonial.title}</h3>
       <p>{testimonial.testimonial}</p>
 

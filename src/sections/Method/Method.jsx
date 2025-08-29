@@ -1,25 +1,30 @@
 import styles from "./Method.module.css";
-import dummy from "../../assets/about/dummy-image.jpg";
 import PageContent from "../../components/PageContent/PageContent";
+
+// IMAGES
+import method1 from "../../assets/method/method-img-1.png";
+import method2 from "../../assets/method/method-img-2.png";
+import method3 from "../../assets/method/method-img-3.png";
+import method4 from "../../assets/method/method-img-4.png";
 
 export const methods = [
   {
-    image: dummy,
+    image: method1,
     title: "Escutamos e mergulhamos",
     description: "Começamos entendendo a fundo sua marca, sua essência, seus desafios e objetivos.",
   },
   {
-    image: dummy,
+    image: method2,
     title: "Criamos com estratégia",
     description: "Nada de achismo. Toda criação é baseada em dados, cultura, tendências e posicionamento.",
   },
   {
-    image: dummy,
+    image: method3,
     title: "Executamos com método",
     description: "Da ideia à entrega, nosso time coloca a mão na massa com agilidade, carinho e muito critério.",
   },
   {
-    image: dummy,
+    image: method4,
     title: "Acompanhamos e otimizamos",
     description: "Analisamos métricas, aprendemos com o mercado e ajustamos para entregar ainda mais resultado.",
   },
@@ -27,7 +32,7 @@ export const methods = [
 
 function Method() {
   return (
-    <div className={`section `}>
+    <div id="method" className={`section ${styles.section}`}>
       <div className={`container ${styles.container}`}>
         <PageContent sessionLabel={"Como Trabalhamos (METHOD)"} title={"A gente planeja, cria, executa e acompanha, com estratégia e coração"} content={"Nada de fórmula pronta. Aqui, cada cliente é único, e cada entrega é feita com base em escuta, pesquisa e criação com propósito. Nosso processo une planejamento estratégico e criatividade com acompanhamento próximo dos resultados."} />
 

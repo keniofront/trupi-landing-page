@@ -1,7 +1,8 @@
 import Button from "../../components/Button/Button";
 import PageContent from "../../components/PageContent/PageContent";
 import styles from "./Cta.module.css";
-import dummy from "../../assets/about/dummy-image.jpg";
+import image from '../../assets/cta/cta-img.jpg'
+
 
 export default function Cta() {
   return (
@@ -14,7 +15,7 @@ export default function Cta() {
         </div>
 
         <div className={styles.image}>
-          <img src={dummy} alt="" />
+          <img src={image} alt="" />
         </div>
       </div>
     </div>
