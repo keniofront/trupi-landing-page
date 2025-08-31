@@ -19,6 +19,8 @@
 
 html,
 body {
+  /* TIP: a falta desse faz a navbar vazar! */
+  overflow-x: hidden;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;

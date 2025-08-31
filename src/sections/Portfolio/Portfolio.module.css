@@ -31,7 +31,7 @@
 .clientsContent {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .clientImage {
@@ -39,6 +39,7 @@
   flex: 1;
   align-items: center;
   justify-content: center;
+  height: 250px;
   padding: 1rem;
   background-color: white;
 }
@@ -56,6 +57,7 @@
 
   .clientsContent {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .clientImage {

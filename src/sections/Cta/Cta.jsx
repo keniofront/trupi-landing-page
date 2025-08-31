@@ -1,8 +1,7 @@
 import Button from "../../components/Button/Button";
 import PageContent from "../../components/PageContent/PageContent";
 import styles from "./Cta.module.css";
-import image from '../../assets/cta/cta-img.jpg'
-
+import image from "../../assets/cta/cta-img.jpg";
 
 export default function Cta() {
   return (
@@ -11,7 +10,7 @@ export default function Cta() {
         <div className={styles.content}>
           <PageContent showSession={false} title={"Bora colocar sua marca no mundo do jeito certo? cta"} content={"Se você quer crescer com consistência, criatividade e estratégia, a Trupi é sua parceira. Vamos conversar sobre o futuro da sua marca?"} />
 
-          <Button text={"lorem ipsum"} className={styles.btn}/>
+          <Button text={"lorem ipsum"} className={styles.btn} />
         </div>
 
         <div className={styles.image}>

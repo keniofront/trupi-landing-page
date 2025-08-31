@@ -1,39 +1,104 @@
+.section {
+  padding: var(--padding-section-desktop) 0;
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  align-items: end;
-  width: var(--max-width);
+  gap: 1rem;
+  width: 100%;
+  max-width: var(--max-width);
   height: 100%;
-  margin: var(--padding-section) auto;
-  border: 5px solid red;
+  margin: 0 auto;
 }
 
 .cardContainer {
-  display: flex;
-  gap: 1rem;
-  height: 320px;
-  border: 2px solid yellow;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  height: 376px;
+  margin-top: 2rem;
+  overflow: hidden;
 }
 
 .testimonialCard {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   justify-content: space-between;
-  width: 100%;
-  border: 2px solid black;
+}
+
+.testimonialCard h3 {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 29px;
+}
+
+.testimonialCard h4 {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.text {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+}
+
+.text::before {
+  position: absolute;
+  top: -40px;
+  left: -20px;
+  z-index: -1;
+  color: rgba(0, 0, 0, 0.1);
+  font-size: 100px;
+  content: "“";
+  pointer-events: none; /* não atrapalha cliques/seleção */
+}
+
+.pos {
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .personContainer {
   display: flex;
+  gap: 1rem;
+  align-items: center;
   width: 100%;
-  border: 2px solid red;
 }
 
 .personPhoto img {
   width: 56px;
+  border-radius: 50%;
+}
+
+.nav {
+  display: flex;
+  justify-content: end;
+  width: 100%;
 }
 
 .nextButton {
-  padding: 1rem;
+  color: var(--color-primary);
+  font-size: 64px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: var(--padding-section-mobile) 1rem;
+  }
+
+  .cardContainer {
+    grid-template-columns: 1fr;
+  }
+
+.testimonialCard{
+  padding: 2rem;
+}
+
+
 }

@@ -21,21 +21,21 @@
 }
 
 .textContainer {
-  height: 85%;
-  padding: 0 1rem;
-  flex: 0 0 60%;
   z-index: 2;
   display: flex;
+  flex: 0 0 60%;
   flex-direction: column;
-  justify-content: center;
   gap: 4rem;
+  justify-content: center;
+  height: 85%;
+  padding: 0 1rem;
 }
 
 .textContent {
-  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
 }
 
 .textContent h1 {
@@ -52,33 +52,33 @@
 }
 
 .heroImgFront {
-  flex: 1;
+  position: relative;
   z-index: -1;
-  height: 100%;
   display: flex;
+  flex: 1;
   align-items: center;
   justify-content: center;
-  position: relative;
+  height: 100%;
   /* border: 20px solid rgb(0, 255, 128); */
 }
 
 .heroImgFront img {
+  position: absolute;
   height: 100%;
   /* para movimentar a imagem x e y */
   transform: translate(-100px, 30px);
-  position: absolute;
 }
 
 .background {
-  width: 100%;
-  height: 100vh;
   position: absolute;
   z-index: -10;
+  width: 100%;
+  height: 100vh;
   background-image: url("../../assets/home/hero-background.jpg");
-  background-size: 110%;
+  background-repeat: no-repeat;
   background-position: bottom;
   background-position-x: center;
-  background-repeat: no-repeat;
+  background-size: 110%;
   /* border: 10px solid green; */
 }
 
@@ -98,9 +98,9 @@
   }
 
   .textContainer {
+    flex: 0;
     /* width: 95%; */
     flex-direction: column;
-    flex: 0;
     /* padding: 1rem; */
     /* margin-bottom: 3rem; */
     /* gap: 2rem; */
@@ -112,12 +112,12 @@
   }
 
   .textContent {
-    width: 100%;
+    gap: 1rem;
     /* height: auto; */
     justify-content: center;
-    text-align: center;
-    gap: 1rem;
+    width: 100%;
     padding: 3rem 1rem;
+    text-align: center;
     /* border: 10px solid yellow; */
   }
 
@@ -134,14 +134,14 @@
   }
 
   .heroImgFront img {
-    transform: translateX(0px);
-    height: 100%;
     top: 3rem;
+    height: 100%;
+    transform: translateX(0px);
   }
 
   .background {
     background-image: url("../../assets/home/hero-background-mobile.jpg");
-    background-size: cover;
     background-position: right;
+    background-size: cover;
   }
 }

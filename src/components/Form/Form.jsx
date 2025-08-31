@@ -46,10 +46,7 @@ function Form() {
   // Cada input é um "controlled component": o valor vem do state e onChange atualiza o state.
   // Isso facilita validar, limpar ou enviar os dados.
   return (
-    <form
-      className={styles.form}
-      onSubmit={handleSubmit}
-    >
+    <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.row}>
         {/* Nome (required) */}
         <input
@@ -61,41 +58,19 @@ function Form() {
         />
 
         {/* Sobrenome (opcional) */}
-        <input
-          type="text"
-          value={sobrenome}
-          onChange={(e) => setSobrenome(e.target.value)}
-          placeholder="Digite seu Sobrenome:"
-        />
+        <input type="text" value={sobrenome} onChange={(e) => setSobrenome(e.target.value)} placeholder="Digite seu Sobrenome:" />
       </div>
 
       <div className={styles.row}>
         {/* Telefone: usamos type="tel" para sugerir teclado numérico em mobiles */}
-        <input
-          type="tel"
-          value={telefone}
-          onChange={(e) => setTelefone(e.target.value)}
-          placeholder="Digite seu Telefone:"
-        />
+        <input type="tel" value={telefone} onChange={(e) => setTelefone(e.target.value)} placeholder="Digite seu Telefone:" />
         {/* Email (required). type="email" já dá ajuda do navegador */}
 
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-          placeholder="Digite seu Email:"
-        />
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required placeholder="Digite seu Email:" />
       </div>
 
       {/* Mensagem (required): textarea para textos maiores */}
-      <textarea
-        value={mensagem}
-        onChange={(e) => setMensagem(e.target.value)}
-        required
-        rows={4}
-        placeholder="Mensagem:"
-      />
+      <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} required rows={4} placeholder="Mensagem:" />
 
       {/* Botão envia o form; onSubmit no <form> trata o envio */}
       <button type="submit">Enviar</button>

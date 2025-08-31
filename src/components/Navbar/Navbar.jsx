@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import styles from "./Navbar.module.css";
 
 // Navlinks data
+// eslint-disable-next-line react-refresh/only-export-components
 export const navbarLinks = [
   { title: "Sobre", url: "#about" },
   { title: "Serviços", url: "#services" },
@@ -36,28 +37,30 @@ export default function Navbar() {
 
   // Renderização do Componente
   return (
-    <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
-      <div className={`container ${styles.container}`}>
-        <div className={styles.logoContainer} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          <span className={styles.logo}></span>
-        </div>
+    <div className={styles.testy}>
+      {/* <div className={styles.testx}>TESTE Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, et!</div> */}
 
-        {/* Navlinks dinâmicos*/}
-        <div className={`${styles.links} ${isOpen ? styles.active : ""}`}>
-          {navbarLinks.map((link, index) => (
-            <a key={index} href={link.url} onClick={handleLinkClick}>
-              {link.title}
-            </a>
-          ))}
+      <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
+        <div className={`container ${styles.container}`}>
+          <div className={styles.logoContainer} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            <span className={styles.logo}></span>
+          </div>
+          {/* Navlinks dinâmicos*/}
+          <div className={`${styles.links} ${isOpen ? styles.active : ""}`}>
+            {navbarLinks.map((link, index) => (
+              <a key={index} href={link.url} onClick={handleLinkClick}>
+                {link.title}
+              </a>
+            ))}
+          </div>
+          {/* Icone do Menu Responsivo */}
+          <div className={`${styles.hamburger} ${isOpen ? styles.ativo : ""}`} onClick={toggleMenu} aria-label="Abrir menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-
-        {/* Icone do Menu Responsivo */}
-        <div className={`${styles.hamburger} ${isOpen ? styles.ativo : ""}`} onClick={toggleMenu} aria-label="Abrir menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   );
 }

@@ -55,17 +55,11 @@
 }
 
 @media (max-width: 700px) {
+  .section {
+    padding: var(--padding-section-mobile) 1rem;
+  }
 
-.section {
-  padding: var(--padding-section-mobile) 1rem;
-}
-
-.cards{
-  grid-template-columns: 1fr;
-}
-
-
-
-
-
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
