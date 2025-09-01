@@ -19,6 +19,10 @@ dist-ssr
 .vscode
 .vscode/
 
+.backup
+.backup/
+/backup/
+
 .idea
 .DS_Store
 *.suo
