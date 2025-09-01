@@ -41,6 +41,8 @@
 .textContent h1 {
   color: white;
   font-size: 3rem;
+  text-shadow: var(--shadow-primary);
+
 }
 
 .textContent h4 {

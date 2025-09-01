@@ -18,11 +18,14 @@ function Contact() {
   return (
     <div id="contact" className={`section ${styles.section}`}>
       <div className={`container ${styles.container}`}>
-        <PageContent sessionLabel={"Contato(contact)"} title={"Fale com a Trupi. Estamos prontos para ouvir você e ajudar no que for preciso"} />
+        {/* Titulo da Sessão */}
+        <PageContent sessionLabel={"Contato"} title={"Fale com a Trupi. Estamos prontos para ouvir você e ajudar no que for preciso"} />
 
+        {/* Conteúdo */}
         <div className={styles.contactContainer}>
           <div className={styles.channels}>
-            <h3>Nossos Canais de Atendimento</h3>
+            <h3 className={styles.desktop}>Nossos Canais de Atendimento</h3>
+            <h3 className={styles.mobile}>Canais de Atendimento</h3>
 
             <h4>Endereço:</h4>
 
@@ -71,9 +74,12 @@ function Contact() {
           </div>
 
           <div className={styles.formContainer}>
-            <h3>Preencha o formulário e nossa equipe entrará em contato o mais rápido possível</h3>
+            <h3 className={styles.desktop}>Preencha o formulário e nossa equipe entrará em contato o mais rápido possível</h3>
+            <h3 className={styles.mobile}>Ou preencha nosso formulário</h3>
 
-            <Form />
+            <div className={styles.formComponent}>
+              <Form />
+            </div>
           </div>
         </div>
       </div>

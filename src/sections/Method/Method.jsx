@@ -34,7 +34,7 @@ function Method() {
   return (
     <div id="method" className={`section ${styles.section}`}>
       <div className={`container ${styles.container}`}>
-        <PageContent sessionLabel={"Como Trabalhamos (METHOD)"} title={"A gente planeja, cria, executa e acompanha, com estratégia e coração"} content={"Nada de fórmula pronta. Aqui, cada cliente é único, e cada entrega é feita com base em escuta, pesquisa e criação com propósito. Nosso processo une planejamento estratégico e criatividade com acompanhamento próximo dos resultados."} />
+        <PageContent sessionLabel={"Como Trabalhamos"} title={"A gente planeja, cria, executa e acompanha, com estratégia e coração"} content={"Nada de fórmula pronta. Aqui, cada cliente é único, e cada entrega é feita com base em escuta, pesquisa e criação com propósito. Nosso processo une planejamento estratégico e criatividade com acompanhamento próximo dos resultados."} />
 
         <div className={styles.methods}>
           {methods.map((method, index) => {
@@ -44,8 +44,8 @@ function Method() {
                   <img src={method.image} alt="" />
                 </div>
                 <div className={styles.methodContent}>
-                  <p className={styles.title}>{method.title}</p>
-                  <p className={styles.content}>{method.description}</p>
+                  <h5 className={styles.title}>{method.title}</h5>
+                  <p >{method.description}</p>
                 </div>
               </div>
             );

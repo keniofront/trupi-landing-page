@@ -27,7 +27,7 @@
   width: 100px;
   height: 100%;
   object-fit: cover;
-  object-position: left;
+  object-position: right;
 }
 
 .methodContent {
@@ -38,10 +38,6 @@
   padding: 1rem;
   color: white;
   background-color: #a8a9bb;
-}
-
-.methodContent .title {
-  font-weight: 700;
 }
 
 @media (max-width: 700px) {
@@ -55,10 +51,6 @@
   }
 
   .methodContent {
-    padding: 2rem;
-  }
-
-  .methodContent p {
-    font-size: 20px;
+    padding: 1rem;
   }
 }

@@ -1,11 +1,13 @@
 :root {
   --color-primary: #3155a4;
   --color-secondary: #00af4c;
+  --color-light: #b7c4df;
   --max-width: 1200px;
   --padding-section-desktop: 72px;
   --padding-section-mobile: 40px;
   --navbar-height: 65px;
-  --shadow-primary: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  --shadow-primary: 10px 10px 10px rgba(0, 0, 0, 0.4);
+  --font-default: "Montserrat", sans-serif;
 }
 
 /* Reset básico */
@@ -19,10 +21,9 @@
 
 html,
 body {
-  /* TIP: a falta desse faz a navbar vazar! */
-  overflow-x: hidden;
+  overflow-x: hidden; /* TIP: a falta desse faz a navbar vazar! */
   font-size: 18px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--font-default);
   scroll-behavior: smooth;
 }
 
@@ -30,7 +31,7 @@ body {
 .section {
   /* border: 5px solid #d87093; */
   /*  espaço do topo ao rolar até aqui */
-  scroll-margin-top: 40px;
+  scroll-margin-top: 20px;
 }
 
 .container {
@@ -38,6 +39,8 @@ body {
 }
 
 /* Text Styles */
+/* Escala: Major Third 1.250 */
+
 h1 {
   font-weight: 700;
   font-size: 3.05rem;
@@ -75,7 +78,45 @@ p {
 
 @media (max-width: 700px) {
   html,
-  body {
+  body,
+  p {
     font-size: 16px;
+    line-height: 1.65;
+  }
+
+  /* Text Styles */
+  /* Escala: Minor Third 1.2 */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: 1.15;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 2.49rem;
+  }
+
+  h2 {
+    /* font-weight: 700; */
+    font-size: 2.07rem;
+  }
+
+  h3 {
+    /* font-weight: 600; */
+    font-size: 1.73rem;
+  }
+
+  h4 {
+    /* font-weight: 600; */
+    font-size: 1.44rem;
+  }
+
+  h5 {
+    /* font-weight: 500; */
+    font-size: 1.2rem;
   }
 }

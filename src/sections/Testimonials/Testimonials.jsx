@@ -78,7 +78,7 @@ const testimonialsData = [
 // Este componente recebe um depoimento e exibe suas informações
 function TestimonialCard({ testimonial }) {
   return (
-    <div id="testimonials" className={styles.testimonialCard}>
+    <div className={styles.testimonialCard}>
       <h3>{testimonial.title}</h3>
       <p className={styles.text}>{testimonial.testimonial}</p>
 
@@ -138,10 +138,10 @@ function Testimonials() {
   const currentTestimonials = testimonialsData.slice(startIndex, endIndex);
 
   return (
-    <div className={`section ${styles.section}`}>
+    <div id="testimonials" className={`section ${styles.section}`}>
       <div className={`container ${styles.container}`}>
         {/* Header */}
-        <PageContent sessionLabel={"Depoimentos (Testimonials)"} title={"Quem trabalha com a gente, vira fã e parceiro de jornada."} showContent={false} />
+        <PageContent sessionLabel={"Depoimentos"} title={"Quem trabalha com a gente, vira fã e parceiro de jornada."} showContent={false} />
 
         {/* Cards Container*/}
         <div className={styles.cardContainer}>

@@ -42,7 +42,7 @@ function About() {
           <div className={styles.aboutContainer}>
             <div className={styles.sessionContent}>
               {/* sessions title */}
-              <PageContent sessionLabel={"Quem somos (ABOUT)"} title={"Uma agência com sotaque, alma criativa e visão de futuro"} />
+              <PageContent sessionLabel={"Quem somos"} title={"Uma agência com sotaque, alma criativa e visão de futuro"} />
             </div>
 
             {/* session content */}

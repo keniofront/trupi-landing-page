@@ -35,7 +35,7 @@ export default function Services() {
     <section id="services" className={`section ${styles.section}`}>
       <div className={`container ${styles.container}`}>
         <div className={styles.textContent}>
-          <PageContent sessionLabel={"O que fazemos (SERVICES)"} title={"Soluções criativas e estratégicas pra fazer sua marca crescer com identidade"} />
+          <PageContent sessionLabel={"O que fazemos"} title={"Soluções criativas e estratégicas pra fazer sua marca crescer com identidade"} />
         </div>
 
         <div className={styles.cards}>

@@ -3,6 +3,17 @@ import Button from "../../components/Button/Button";
 import heroImgFront from "../../assets/home/hero-img-front.png";
 
 export default function Home() {
+  // Função para rolar até uma seção específica
+  const handleClick = (sectionId) => {
+    // Busca o elemento pelo ID
+    const section = document.getElementById(sectionId);
+
+    // Se o elemento existe, rola a página até ele
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section id="home" className={`section ${styles.section}`}>
       <div className={`container ${styles.container}`}>
@@ -17,7 +28,7 @@ export default function Home() {
             <h1 className={styles.mobile}>Sua marca com identidade</h1>
             <h4 className={styles.mobile}>Na Trupi, a gente transforma ideias em presença</h4>
 
-            <Button className={styles.button} text="Solicite um orçamento" />
+            <Button className={styles.button} onClick={() => handleClick("contact")} text="Solicite um orçamento" />
           </div>
         </div>
 

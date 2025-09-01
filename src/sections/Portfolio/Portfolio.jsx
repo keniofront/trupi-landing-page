@@ -12,7 +12,7 @@ function Portfolio() {
     <div id="portfolio" className={`section ${styles.section}`}>
       <div className={`container ${styles.container}`}>
         <div className={styles.textContent}>
-          <PageContent sessionLabel={"Portfólio (PORT)"} title={"Marcas que evoluíram com a Trupi"} />
+          <PageContent sessionLabel={"Portfólio"} title={"Marcas que evoluíram com a Trupi"} />
         </div>
 
         <div className={styles.row}>

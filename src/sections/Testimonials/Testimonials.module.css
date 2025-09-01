@@ -98,6 +98,8 @@
 
 .testimonialCard{
   padding: 2rem;
+  background-color: var(--color-light);
+  border-radius: 16px;
 }
 
 

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./Form.module.css";
+import Button from "../../components/Button/Button";
 
 function Form() {
   // Para iniciantes é mais fácil ver um state por campo (cada campo tem seu useState).
@@ -32,7 +33,6 @@ function Form() {
 
     // Por agora, apenas mostramos no console — fácil de testar no navegador.
     console.log("Dados submetidos:", dados);
-    alert("Mensagem enviada! Veja o console (F12).");
 
     // Boa prática: limpar os campos após sucesso (melhora a UX)
     setNome("");
@@ -73,7 +73,7 @@ function Form() {
       <textarea value={mensagem} onChange={(e) => setMensagem(e.target.value)} required rows={4} placeholder="Mensagem:" />
 
       {/* Botão envia o form; onSubmit no <form> trata o envio */}
-      <button type="submit">Enviar</button>
+      <Button type="submit" text={"Enviar"} />
     </form>
   );
 }
