@@ -7,10 +7,10 @@
 ![Preview 01](./docs/preview-1.jpg)
 _Preview Desktop_
 
-![Preview 02](./docs/preview-2.jpg)
+![Preview 02](./docs/preview-3.jpg)
 _Preview Mobile_
 
-![Preview 01](./docs/preview-3.jpg)
+![Preview 01](./docs/preview-2.jpg)
 _Panorama Geral_
 
 ![Tecnologias](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
