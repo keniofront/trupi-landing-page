@@ -2,7 +2,7 @@
 
 > Uma landing page moderna, responsiva e estratégica, criada para destacar a identidade digital da Trupi, empresa de Marketing. O projeto evidencia expertise em design UI/UX e desenvolvimento front-end focado em performance e conversão.
 
-[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel)](https://simonen-landing-page.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/🌐%20Live%20Demo-Vercel-000000?style=for-the-badge&logo=vercel)](https://trupi-landing-page.vercel.app/)
 
 ![Preview 01](./docs/preview-1.jpg)
 _Preview Desktop_
