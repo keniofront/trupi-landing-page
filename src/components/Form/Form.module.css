@@ -1,0 +1,52 @@
+.form {
+  display: flex;
+  flex: 1; /* esse aqui que fez com que text ares ocupase  o espaço  */
+  flex-direction: column;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 100%;
+  font-size: 16px !important;
+  font-family: var(--font-default);
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.row input {
+  flex: 1;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #fff;
+  border: 1px solid #d1d5db; /* Cinza suave */
+  border-radius: 6px;
+  outline: none;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+textarea {
+  flex: 1;
+  height: 100%;
+  resize: both;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column; /* Inputs ficam em stack */
+    gap: 1rem;
+  }
+}

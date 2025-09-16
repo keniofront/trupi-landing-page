@@ -1,0 +1,100 @@
+:root {
+  --color-primary: #3155a4;
+  --color-secondary: #00af4c;
+  --color-light: #b7c4df;
+  --max-width: 1200px;
+  --padding-section-desktop: 72px;
+  --padding-section-mobile: 40px;
+  --navbar-height: 65px;
+  --shadow-primary: 8px 8px 10px rgba(0, 0, 0, 0.4);
+  --shadow-secondary: 8px 8px 10px rgba(0, 0, 0, 0.1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden; /* TIP: a falta desse faz a navbar vazar! */
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+.section {
+  scroll-margin-top: 20px;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 3.05rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 2.44rem;
+  line-height: 1.3;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: 1.95rem;
+  line-height: 1.4;
+}
+
+h4 {
+  font-weight: 600;
+  font-size: 1.56rem;
+  line-height: 1.4;
+}
+
+h5 {
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+p {
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    line-height: 1.15;
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 2.49rem;
+  }
+
+  h2 {
+    /* font-weight: 700; */
+    font-size: 2.07rem;
+  }
+
+  h3 {
+    /* font-weight: 600; */
+    font-size: 1.73rem;
+  }
+
+  h4 {
+    /* font-weight: 600; */
+    font-size: 1.44rem;
+  }
+
+  h5 {
+    /* font-weight: 500; */
+    font-size: 1.2rem;
+  }
+}

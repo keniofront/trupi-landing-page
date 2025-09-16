@@ -1,0 +1,48 @@
+.section {
+  padding: 1rem 0;
+  background-color: var(--color-primary);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 1rem;
+  color: white;
+  font-weight: 700;
+}
+
+.legal {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.legal a {
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+@media (max-width: 700px) {
+  .section {
+    padding: var(--padding-section-mobile) 1rem;
+  }
+
+.legal{
+  flex-direction: column;
+  gap: 0;
+}
+
+}
